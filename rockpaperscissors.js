@@ -66,12 +66,13 @@ function game() {
         } else {
         console.log("Scores: ".concat("Ah you lost! You: ", scoreUser, " - ", "Computer: ", scoreComputer));
        }
+    scoreUser = 0;
+    scoreComputer = 0;
     let playAgain = confirm("Do you want to play again?");
     if (playAgain){
         game();
         } else {
         alert("Thank you for playing!");
         }
-    scoreUser = 0;
-    scoreComputer = 0;
+
     }
