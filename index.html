@@ -3,40 +3,67 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
 		<title>Rock Paper Scissors</title>
 	</head>
 	<body>
-		<div>
-			<!-- <button id="startgame">Start Game</button> -->
+		<div class="header">
+			<div class="header-left">Rock Paper Scissors</div>
+			<div class="header-right">
+				<ul>
+					<li><a class="header-anchor" href="https://github.com/Stoefza">My Github</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="container">
-			<div class="buttons">
-				<button id="rock" class="play-buttons">Rock</button>
-				<button id="paper" class="play-buttons">Paper</button>
-				<button id="scissors" class="play-buttons">Scissors</button>
+		<div class="game-container">
+			<div class="button-pad">
+				<div class="button-card">
+					<button id="rock" class="play-buttons"><img class="button-image" src="/images/fist.png" alt="" /></button>
+				</div>
+				<div class="button-card">
+					<button id="paper" class="play-buttons"><img class="button-image" src="/images/five.png" alt="" /></button>
+				</div>
+				<div class="button-card">
+					<button id="scissors" class="play-buttons"><img class="button-image" src="/images/two.png" alt="" /></button>
+				</div>
 			</div>
-			<h3 id="result"></h3>
-			<div>
-				<div>
-					<h2>Player score</h2>
-					<p id="playerScore"></p>
+			<div class="result-border-text">Scoreboard</div>
+			<div class="results-container">
+				<div class="round-result">
+					<h3 id="result">No rounds played</h3>
+				</div>
+				<div class="score-card">
+					<div>
+						<h2>Player score</h2>
+						<p id="player-score"></p>
+					</div>
+					<div>
+						<h2>Computer score</h2>
+						<p id="computer-score"></p>
+					</div>
+					<!-- <div>
+						<h2>Ties</h2>
+						<p id="rounds-tied"></p>
+					</div> -->
 				</div>
 				<div>
-					<h2>Computer score</h2>
-					<p id="computerScore"></p>
-				</div>
-                <div>
-					<h2>Ties</h2>
-					<p id="roundsTied"></p>
+					<h3>Total Rounds</h3>
+					<p id="total-rounds"></p>
 				</div>
 			</div>
-            <div>
-				<h3>Total Rounds</h3>
-				<p id="totalRounds"></p>
-			</div>
-			<br />
 		</div>
-        <script src="./rockpaperscissors.js"></script>
-    </body>
+		<div class="modal" id="modal">
+			<div class="modal-inner">
+				<h2 id="game-result"></h2>
+				<h1 id="final-score-text"></h1>
+				<p>Want to play again?</p>
+				<div id="modal-buttons">
+					<button id="play-again">Yes</button>
+					<button id="dont-play-again">No</button>
+				</div>
+			</div>
+	
+
+		<script src="./rockpaperscissors.js"></script>
+	</body>
 </html>
