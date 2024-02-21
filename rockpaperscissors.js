@@ -3,6 +3,12 @@ let scoreComputer = 0;
 let rounds = 0;
 let ties = 0;
 const playButtons = document.querySelectorAll("button");
+const values = ["rock", "paper", "scissors"];
+const modal = document.getElementById("modal");
+const playAgain = document.getElementById("play-again");
+const dontPlayAgain = document.getElementById("dont-play-again");
+
+console.log(playButtons);
 let result;
 
 // This Function returns the text based on a randomly generated number
@@ -46,50 +52,51 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 	let playerChoice;
-	playButtons.forEach(button => {
+	playButtons.forEach((button, index) => {
 		button.addEventListener("click", function () {
-      playerChoice = button.innerText;
+			playerChoice = values[index];
 			playRound(playerChoice, getComputerChoice());
 			updateHtml();
-      scoreCheck(scoreUser, scoreComputer);
+			scoreCheck(scoreUser, scoreComputer);
 		});
 	});
 }
 
 function setResult(roundResult) {
-	result = roundResult;
-	document.getElementById("result").innerText = result;
+	document.getElementById("result").innerText = roundResult;
 }
 
 function scoreCheck(scoreUser, scoreComputer) {
 	if (scoreUser == 5 || scoreComputer == 5) {
-		if (scoreUser > scoreComputer) {
-			if (confirm(`Congrats you won! You beat the computer, wanna play again?`)) {
-				resetGame();
+			modal.classList.add("open");
+			if (scoreUser > scoreComputer) {
+				document.getElementById('game-result').innerText = `Congrats you won! You beat the computer` 
+				
+			} else {      
+				document.getElementById('game-result').innerText = `Sorry you lost....`
+			  
 			}
-		} else {      
-        if (confirm(`Sorry you lost.... wanna try again?`)) {
-          resetGame();
-        }
-      
-    }
-	}
-}
+		  
+		}
+		}
+	
+
+
 
 function resetGame() {
 	scoreUser = 0;
 	scoreComputer = 0;
 	rounds = 0;
 	ties = 0;
-	setResult('');
+	// setResult("");
 	updateHtml();
 }
 
 function updateHtml() {
-	document.querySelector("#playerScore").innerText = scoreUser;
-	document.querySelector("#computerScore").innerText = scoreComputer;
-	document.querySelector("#roundsTied").innerText = ties;
-	document.querySelector("#totalRounds").innerText = rounds;
+	document.querySelector("#player-score").innerText = scoreUser;
+	document.querySelector("#computer-score").innerText = scoreComputer;
+	// document.querySelector("#rounds-tied").innerText = ties;
+	document.querySelector("#total-rounds").innerText = rounds;
 }
 
 game();
