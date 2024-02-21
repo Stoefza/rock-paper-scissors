@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    list-style-type: none;
+    /* max-width: auto; */
+    /* font-size: small; */
+}
+
+body {
+    background-image: url("/images/pastel-grey-crumpled-paper1080.jpg");
+    background-repeat: no-repeat;
+    background-size:auto
+}
+
+.header {
+    display: flex;
+    /* font-family: 'Bungee Inline'; */
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    
+}
+
+.header-left {
+    font-family: 'Bungee Inline';
+    font-size: 28px;
+}
+
+.header-anchor {
+    font-family: 'Bungee Inline';
+    font-size: 18px;
+    
+}
+
+.game-container {
+    margin: 0px 100px;
+    padding-bottom: 10px;
+}
+
+.button-pad {
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-around;
+}
+
+.button-card {
+    max-width: 250px;
+}
+
+.play-buttons {
+    background-color: transparent;
+    padding-bottom: 10px;
+    border-style: none;    
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+.button-image {
+
+        max-width: 100%;
+        height: auto;
+      
+}
+
+.results-container {
+    background-color: rgba(21 ,21 ,21 , 0.8);
+    color: white;
+    padding: 20px;
+    border: 2px solid rgba(21 ,21 ,21 , 0.42);
+    position: relative;
+    margin-top: -15px;
+}
+
+.round-result {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.result-border-text {
+    background-color: rgba(21 ,21 ,21 , 1);
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 998;
+    width: 220px;
+    margin: 0 auto;
+    font-family: 'Bungee Inline';
+    font-size: 24px;
+}
+
+.score-card {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.modal {
+    background-color: rgba(21 ,21 ,21 , 1);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.modal.open {
+    opacity: 0.98;
+    z-index: 999;
+}
+
+.modal-inner {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+    height: 380px;
+    margin-top: 10%;
+}
+
+.modal-inner p {
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+
+
