@@ -2,11 +2,18 @@ let scoreUser = 0;
 let scoreComputer = 0;
 let rounds = 0;
 let ties = 0;
-const playButtons = document.querySelectorAll("button");
+const playButtons = document.querySelectorAll(".play-buttons");
 const values = ["rock", "paper", "scissors"];
 const modal = document.getElementById("modal");
 const playAgain = document.getElementById("play-again");
 const dontPlayAgain = document.getElementById("dont-play-again");
+
+document.getElementById('play-again').addEventListener('click', function() {
+	modal.classList.remove("open");
+	resetGame();
+
+})
+
 
 console.log(playButtons);
 let result;
@@ -26,10 +33,9 @@ function getComputerChoice() {
 //This function allows for 2 parameters and the then compare them to one another
 // Adjusting the score each time
 function playRound(playerSelection, computerSelection) {
-	rounds++;
-	playerSelection = playerSelection.toLowerCase();
+	
 	computerSelection = computerSelection.toLowerCase();
-
+	rounds++;
 	if (playerSelection == computerSelection) {
 		ties++;
 		setResult(`Its a tie!`);
@@ -48,6 +54,7 @@ function playRound(playerSelection, computerSelection) {
 		scoreUser++;
 		setResult(`Win:  You: ${playerSelection} VS. Computer: ${computerSelection}`);
 	}
+	
 }
 
 function game() {
@@ -58,6 +65,7 @@ function game() {
 			playRound(playerChoice, getComputerChoice());
 			updateHtml();
 			scoreCheck(scoreUser, scoreComputer);
+			
 		});
 	});
 }
@@ -100,4 +108,4 @@ function updateHtml() {
 }
 
 game();
-resetGame();
+
