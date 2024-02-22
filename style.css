@@ -43,8 +43,11 @@ body {
 }
 
 .game-container {
+    display: flex;
+    flex-direction: column;
     margin: 0px 100px;
     padding-bottom: 10px;
+    align-content: center;
 }
 
 .button-pad {
@@ -93,7 +96,7 @@ h2 {
     color: white;
     text-align: center;
     position: relative;
-    z-index: 998;
+    z-index: 2;
     width: 220px;
     margin: 0 auto;
     font-family: 'Bungee Inline';
@@ -105,7 +108,7 @@ h2 {
     justify-content: space-around;
     align-content: center;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .modal {
@@ -145,5 +148,23 @@ h2 {
     margin: 10px 0;
 }
 
+.result-div {
+    display: flex;
+    justify-content:space-around;
+    
+}
+
+.total-rounds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    display: inline-block;
+    width: 400px;
+    text-align: left;
+}
 
 
