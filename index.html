@@ -14,6 +14,7 @@
 					<li><a class="header-anchor" href="https://github.com/Stoefza">My Github</a></li>
 				</ul>
 			</div>
+			
 		</div>
 		<div class="game-container">
 			<div class="button-pad">
@@ -26,12 +27,19 @@
 				<div class="button-card">
 					<button id="scissors" class="play-buttons"><img class="button-image" src="/images/two.png" alt="" /></button>
 				</div>
+
 			</div>
-			<div class="result-border-text">Scoreboard</div>
-			<div class="results-container">
+			<div class="result-div">
 				<div class="round-result">
 					<h3 id="result">No rounds played</h3>
 				</div>
+					<div class="total-rounds">
+						<h3>Total Rounds</h3>
+						<p id="total-rounds"></p>
+					</div>				
+				</div>
+			<div class="result-border-text">Scoreboard</div>
+			<div class="results-container">
 				<div class="score-card">
 					<div>
 						<h2>Player score</h2>
@@ -41,14 +49,6 @@
 						<h2>Computer score</h2>
 						<p id="computer-score"></p>
 					</div>
-					<!-- <div>
-						<h2>Ties</h2>
-						<p id="rounds-tied"></p>
-					</div> -->
-				</div>
-				<div>
-					<h3>Total Rounds</h3>
-					<p id="total-rounds"></p>
 				</div>
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 				<p>Want to play again?</p>
 				<div id="modal-buttons">
 					<button id="play-again">Yes</button>
-					<button id="dont-play-again">No</button>
+
 				</div>
 			</div>
 	
